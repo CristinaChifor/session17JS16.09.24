@@ -1,2 +1,2 @@
-# session17JS16.09.24
-Session17 JS 16.09.24
+# session18JS16.09.24
+Session18 JS 16.09.24
