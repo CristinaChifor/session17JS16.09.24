@@ -20,6 +20,21 @@ class Quiz {
             buttonElement.textContent = answer.text;
             this.answerButtons.appendChild(buttonContainer);
             buttonContainer.appendChild(buttonElement);
+            buttonElement.addEventListener("click", () => this.selectAnswer(answer, question, buttonElement));
+        }
+    }
+
+    selectAnswer(answer, question, button) {
+        const correct = answer.correct;
+        if (correct) {
+            this.nextButton.classList.remove("hide");
+            this.feedback.textContent = question.explanation;
+            button.classList.add("correct");
+            this.feedback.classList.add("text-correct");
+        } else {
+            button.classList.add("wrong");
+            this.feedback.textContent = "Raspuns incorect. Te rugam sa incerci din nou";
+            this.feedback.classList.add("text-wrong");
         }
 
     }
